@@ -1,0 +1,138 @@
+/* Some prestyles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+body {
+  display: flex;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.main {
+  display: flex;
+  flex-direction: color;
+  height: 100vh;
+  flex: 1;
+  background-color: aliceblue;
+}
+
+.sidebar {
+  display: flex;
+  flex: 0 0 300px;
+  flex-direction: column;
+  background-color: darkslateblue;
+  color: white;
+}
+
+/* SIDEBAR */
+
+.sidebar header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+.sidebar footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebar nav {
+  padding: 1rem;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.20);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sidebar nav a:hover {
+  transform: scale(0.98);
+}
+
+.site-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+
+/* CHAT */
+
+.chat {
+  color: #333;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.chat-inner {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+  list-style-type: none;
+}
+
+.message {
+  margin-bottom: 1rem;
+}
+
+.message:last-child {
+  margin-bottom: 0;
+}
+
+.username {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 80%;
+  color: rgba(0, 0, 0, 0.50);
+}
+
+.text {
+  margin: 0;
+}
+
+.chat-input {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: darkorange;
+  color: white;
+}
